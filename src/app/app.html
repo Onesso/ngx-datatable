@@ -1,11 +1,57 @@
-<div class="material1">
-  <ngx-datatable
-    [rows]="rows"
-    [columns]="columns"
-    [headerHeight]="50"
-    [scrollbarV]="true"
-    class="material custom-table"
-  >
-  </ngx-datatable>
+<div class="root">
+  <div class="material1">
+    <ngx-datatable
+      class="custom-table"
+      [rows]="rows"
+      [headerHeight]="50"
+      [footerHeight]="50"
+      [scrollbarV]="true"
+    >
+      <!-- name column -->
+      <ngx-datatable-column name="Name" prop="name">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{ value }}
+        </ng-template>
+      </ngx-datatable-column>
+      <!-- gender -->
+      <ngx-datatable-column name="Gender" prop="gender">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{ value }}
+        </ng-template>
+      </ngx-datatable-column>
+
+      <ngx-datatable-column name="Company" prop="company">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{ value }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Age" prop="age">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{ value }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Department" prop="department">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{ value }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Email" prop="email" [width]="200">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{ value }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Country" prop="country">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{ value }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Job Title" prop="jobTitle">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          {{ value }}
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+  </div>
 </div>
+
 <router-outlet />
